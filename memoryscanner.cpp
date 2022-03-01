@@ -57,7 +57,7 @@ int main()
     HWND hwnd;
 
     hwnd = FindWindow(NULL,"AssaultCube"); // Window name of the program you want to scan it's memory
-    if(!hwnd)// program bulunamadi
+    if(!hwnd)// Check if the given window name found
     {
         cout <<"Couldn't find the program!";
         cin.get();
@@ -66,7 +66,7 @@ int main()
     {
         GetWindowThreadProcessId(hwnd,&pid);
         HANDLE phandle = OpenProcess(PROCESS_ALL_ACCESS,0,pid);// all_access means we are getting permission for read write execute
-        if(!phandle)// check the handle 
+        if(!phandle)// Check the handle 
         {
             cout <<"Couldn't get handle"<<endl;
            system("pause");
