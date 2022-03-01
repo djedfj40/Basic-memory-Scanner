@@ -14,7 +14,7 @@ int countcolumn(){  // finding column count function
     fp = fopen("value.txt", "r");
     if (fp == NULL)
     {
-        printf("Couldn't  open the file (Could be a permission problem)");
+        printf("Couldn't  open the file (Could be a permission problem. Try running this as administrator)");
         fclose(fp);
         return 1;
     }
@@ -66,7 +66,7 @@ int main()
     {
         GetWindowThreadProcessId(hwnd,&pid);
         HANDLE phandle = OpenProcess(PROCESS_ALL_ACCESS,0,pid);// all_access means we are getting permission for read write execute
-        if(!phandle)// izin alinamadi
+        if(!phandle)// check the handle 
         {
             cout <<"Couldn't get handle"<<endl;
            system("pause");
