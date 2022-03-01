@@ -56,7 +56,7 @@ int main()
     DWORD pid;
     HWND hwnd;
 
-    hwnd = FindWindow(NULL,"AssaultCube");
+    hwnd = FindWindow(NULL,"AssaultCube"); // Window name of the program you want to scan it's memory
     if(!hwnd)// program bulunamadi
     {
         cout <<"Couldn't find the program!";
